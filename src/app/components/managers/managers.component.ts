@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RestService } from 'src/app/services/rest.service';
 
 @Component({
   selector: 'app-managers',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./managers.component.css']
 })
 export class ManagersComponent implements OnInit {
+  manager = [];
 
-  constructor() { }
+  constructor(public rest: RestService) { }
 
   ngOnInit() {
+    this.getManager;
+  }
+  getManager(){
+    this.rest.getAnimals().subscribe(res=>{
+      this.manager = res.Manager;
+    });
   }
 
 }

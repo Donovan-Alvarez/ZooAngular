@@ -1,0 +1,15 @@
+form{
+    margin: auto;
+}
+
+.center{
+    overflow-anchor: 50px;
+    margin: auto;
+}
+h1{
+    text-align: center;
+}
+button{
+    position: inherit;
+    margin: auto;
+}

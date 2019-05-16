@@ -22,4 +22,8 @@ export class RestService {
     return this.http.get(this.endpoint + 'animals/list-animal').pipe(
       map(this.extractData));
   }
+  getManager(): Observable<any>{
+    return this.http.get(this.endpoint + 'managers/list-managers').pipe(
+      map(this.extractData));
+  }
 }
